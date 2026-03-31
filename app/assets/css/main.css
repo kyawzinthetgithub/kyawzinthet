@@ -56,7 +56,7 @@
   --ring: #93c5fd;
 
   /* navbar and navigation foreground*/
-  --color-navbar: #ffffff33;
+  --color-navbar: rgba(255, 255, 255, 0.11);
   --color-navbar-foreground: #0f172a;
 
   --color-border: rgba(15, 23, 42, 0.12);
@@ -115,7 +115,7 @@
   --ring: #93c5fd;
 
   /* navbar and navigation foreground*/
-  --color-navbar: #ffffff33;
+  --color-navbar: rgba(255, 255, 255, 0.11);
   --color-navbar-foreground: #f8fafc;
 }
 
@@ -177,3 +177,33 @@
   --color-navbar: var(--color-navbar);
   --color-navbar-foreground: var(--color-navbar-foreground);
 }
+
+/* Global styles */
+
+/* Neon-blue thin scrollbar (WebKit + Blink) */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00bfff; /* neon blue */
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33d1ff;
+}
+
+/* Firefox: approximate using available properties */
+html {
+  scrollbar-width: thin; /* closest to 2px */
+  scrollbar-color: #00bfff var(--color-background);
+}
+
+/* Edge/IE fallback: use track/ thumb pseudo-elements where supported */
+* { -ms-overflow-style: auto; }
