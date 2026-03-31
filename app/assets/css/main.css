@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme tokens (default = light) */
+:root {
+  --font-size: 16px;
+  --radius: 0.625rem;
+
+  --color-primary: #0a66c2;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #334155;
+  --color-secondary-foreground: #ffffff;
+
+  --color-info: #0ea5e9;
+  --color-info-foreground: #ffffff;
+
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #ffffff;
+
+  --color-danger: #e11d48;
+  --color-danger-foreground: #ffffff;
+
+  --color-success: #16a34a;
+  --color-success-foreground: #ffffff;
+
+  --color-normal: #0f172a;
+  --color-normal-foreground: var(--color-normal);
+
+  --color-background: #ffffff;
+  --color-foreground: var(--color-normal);
+
+  --color-card: #f8fafc;
+  --color-card-foreground: var(--color-normal);
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: var(--color-normal);
+
+  --color-muted: #e2e8f0;
+  --color-muted-foreground: #64748b;
+
+  --color-accent: #e2e8f0;
+  --color-accent-foreground: #0f172a;
+
+  --color-input: transparent;
+  --color-input-background: #f1f5f9;
+  --color-switch-background: #cbd5e1;
+
+  --border-primary: var(--color-primary);
+  --border-secondary: var(--color-secondary);
+  --border-info: var(--color-info);
+  --border-warning: var(--color-warning);
+  --border-danger: var(--color-danger);
+  --border-normal: rgba(100, 116, 139, 0.35);
+
+  --ring: #93c5fd;
+
+  /* navbar and navigation foreground*/
+  --color-navbar: #ffffff33;
+  --color-navbar-foreground: #0f172a;
+
+  --color-border: rgba(15, 23, 42, 0.12);
+}
+
+.dark {
+  --color-primary: #0a66c2;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #334155;
+  --color-secondary-foreground: #ffffff;
+
+  --color-info: #0ea5e9;
+  --color-info-foreground: #ffffff;
+
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #ffffff;
+
+  --color-danger: #e11d48;
+  --color-danger-foreground: #ffffff;
+
+  --color-success: #16a34a;
+  --color-success-foreground: #ffffff;
+
+  --color-normal: #f8fafc;
+  --color-normal-foreground: var(--color-normal);
+
+  --color-background: #0f172a;
+  --color-foreground: var(--color-normal);
+
+  --color-card: #1e293b;
+  --color-card-foreground: var(--color-normal);
+
+  --color-popover: #1e293b;
+  --color-popover-foreground: var(--color-normal);
+
+  --color-muted: #334155;
+  --color-muted-foreground: #cbd5e1;
+
+  --color-accent: #334155;
+  --color-accent-foreground: #f8fafc;
+
+  --color-input: transparent;
+  --color-input-background: #334155;
+
+  --color-switch-background: #334155;
+  --border-primary: var(--color-primary);
+
+  --border-secondary: var(--color-secondary);
+  --border-info: var(--color-info);
+
+  --border-warning: var(--color-warning);
+  --border-danger: var(--color-danger);
+
+  --border-normal: rgba(203, 213, 225, 0.35);
+  --ring: #93c5fd;
+
+  /* navbar and navigation foreground*/
+  --color-navbar: #ffffff33;
+  --color-navbar-foreground: #f8fafc;
+}
+
+/* -----------------------------
+   Tailwind Theme Bindings
+----------------------------- */
+
+@theme {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-info: var(--color-info);
+  --color-info-foreground: var(--color-info-foreground);
+
+  --color-warning: var(--color-warning);
+  --color-warning-foreground: var(--color-warning-foreground);
+
+  --color-danger: var(--color-danger);
+  --color-danger-foreground: var(--color-danger-foreground);
+
+  --color-success: var(--color-success);
+  --color-success-foreground: var(--color-success-foreground);
+
+  --color-normal: var(--color-normal);
+  --color-normal-foreground: var(--color-normal-foreground);
+
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+
+  --color-popover: var(--color-popover);
+  --color-popover-foreground: var(--color-popover-foreground);
+
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+
+  --color-input: var(--color-input);
+  --color-input-background: var(--color-input-background);
+
+  --color-switch-background: var(--color-switch-background);
+  --border-primary: var(--border-primary);
+  --border-secondary: var(--border-secondary);
+  --border-info: var(--border-info);
+  --border-warning: var(--border-warning);
+  --border-danger: var(--border-danger);
+  --border-normal: var(--border-normal);
+
+  --ring: var(--ring);
+
+  /* navbar and navigation foreground*/
+  --color-navbar: var(--color-navbar);
+  --color-navbar-foreground: var(--color-navbar-foreground);
+}
