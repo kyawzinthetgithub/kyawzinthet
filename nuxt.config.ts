@@ -3,9 +3,18 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ['./app/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
   },
+  modules: ['@hypernym/nuxt-gsap'],
+  gsap: {
+    provide: true,
+    composables: true,
+  },
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000
+  }
 });
