@@ -22,7 +22,8 @@
           <p class="text-lg">Experienced in supporting POS systems by improving usability, training users, and ensuring
             smooth and accurate business operations. I am driven to develop practical, user-focused applications
             that simplify complex workflows and solve real-world operational challenges.</p>
-            <button class="bg-primary text-white mt-3 py-2 px-4 rounded hover:bg-primary-dark transition cursor-pointer">Resume</button>
+          <button @click="openResume"
+            class="bg-primary text-white mt-3 py-2 px-4 rounded hover:bg-primary-dark transition cursor-pointer">Resume</button>
         </div>
       </div>
     </div>
@@ -33,4 +34,16 @@
 
 const developer = '/imgs/about_developer.png';
 const experienceYears = new Date().getFullYear() - 2023;
+
+const config = useRuntimeConfig();
+
+function openResume() {
+  const cloudName = config.public?.cloudinaryCloudName;
+  const publicId = config.public?.cloudinaryResumePublicId;
+
+  const pdfUrl = `https://res.cloudinary.com/dg5ud0y4w/image/upload/v1775123600/Kyaw_Zin_Thet_cv.pdf`;
+
+  window.open(pdfUrl, '_blank', 'noopener');
+
+}
 </script>
