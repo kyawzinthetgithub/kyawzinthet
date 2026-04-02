@@ -3,7 +3,7 @@
         <!-- <ThemeToggler /> -->
         <header class="sticky top-0 z-30 bg-white/10 dark:bg-black/30 backdrop-blur-md border-b border-gray-300/20">
             <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-                <NuxtLink to="/" class="text-lg font-bold hover:text-primary transition">{{'< KZT />'}}</NuxtLink>
+                <NuxtLink to="/" @click.prevent="scrollTo('home')" class="text-lg font-bold hover:text-primary transition">{{'< KZT />'}}</NuxtLink>
                 <!-- Mobile menu button -->
                 <button
                     class="sm:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-primary focus:outline-none cursor-pointer"
@@ -51,7 +51,7 @@
         </header>
         <main class="p-5 mx-auto">
             <HomeSection id="home" />
-            <!-- <AboutSection id="about" /> -->
+            <AboutSection id="about" />
         </main>
     </div>
 </template>

@@ -1,47 +1,34 @@
 <template>
     <div class="grid md:grid-cols-2 gap-x-5 py-5">
-        <div>
-            <h1 class="md:text-4xl text-3xl font-bold mb-4">Hi, I'm Kyaw Zin Thet 👋</h1>
-            <p class="text-lg mb-6">
-                I'm into a
-                <span class="inline-block">
-                    <span class="typed font-bold text-primary" aria-live="polite">{{ typed }}</span>
-                    <span class="cursor" aria-hidden="true"></span>
-                </span>
-            </p>
-            <div>
-                <p>
-                    Experienced Full Stack Web Developer with a strong passion for building scalable and efficient
-                    applications
-                    using <b class="text-primary">PHP</b>, <b class="text-primary">Laravel</b>, <b
-                        class="text-primary">Vue.js</b>, and <b class="text-primary">Nuxt.js</b>. Proficient in backend
-                    <b class="text-primary">API</b> development, writing clean and
-                    well
-                    documented code, and applying test-driven development practices. Skilled at collaborating with cross
-                    functional teams, including <b class="text-primary">Mobile</b> developers and <b
-                        class="text-primary">UI/UX</b> designers, to deliver high-quality
-                    solutions.
-                    Demonstrated ability to mentor <b class="text-primary">junior developers</b>, troubleshoot and
-                    resolve critical issues, and
-                    effectively
-                    leverage <b class="text-primary">AI</b> tools to enhance productivity. Experienced in supporting <b
-                        class="text-primary">POS</b> systems by improving
-                    usability,
-                    training users, and ensuring smooth and accurate business operations.
-                    Driven to develop practical, user-focused applications that solve real-world operational challenges,
-                    simplify
-                    complex workflows, and address the actual needs and pain points faced by users on the ground.
+        <div class="flex justify-center items-center order-2 md:order-1">
+            <div class="">
+                <h1 class="md:text-4xl text-3xl font-bold mb-4">Hi, I'm Kyaw Zin Thet 👋</h1>
+                <p class="text-lg mb-6">
+                    I'm into a
+                    <span class="inline-block">
+                        <span class="typed font-bold text-primary" aria-live="polite">{{ typed }}</span>
+                        <span class="cursor" aria-hidden="true"></span>
+                    </span>
                 </p>
-            </div>
-            <div class="flex gap-4 mt-3">
-                <a href="" class="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition">View
-                    Projects</a>
-                <a href=""
-                    class="px-4 py-2 border border-primary text-primary rounded hover:bg-primary hover:text-white transition">Contact
-                    Me</a>
+                <div>
+                        <p>
+                            Experienced Full Stack Web Developer ({{ experienceYears }}+ years) specializing in <b class="text-primary">PHP</b>,
+                            <b class="text-primary">Laravel</b>, <b class="text-primary">Vue.js</b>, and <b
+                                class="text-primary">Nuxt.js</b>. I build scalable, test-driven backend APIs, write clean,
+                            well-documented code, mentor junior developers, and improve POS usability with practical,
+                            user-focused solutions.
+                        </p>
+                </div>
+                <div class="flex gap-4 mt-3">
+                    <a href="" class="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition">View
+                        Projects</a>
+                    <a href=""
+                        class="px-4 py-2 border border-primary text-primary rounded hover:bg-primary hover:text-white transition">Contact
+                        Me</a>
+                </div>
             </div>
         </div>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center order-1 md:order-2">
             <div class="relative w-40 sm:w-48 md:w-64 lg:w-80 h-40 sm:h-48 md:h-64 lg:h-80 hidden md:block">
                 <img :src="developer" alt="Developer Image"
                     class="w-full h-full object-cover rounded-full mx-auto shadow-lg">
@@ -64,7 +51,7 @@
             </div>
 
             <!-- simple icon row for small screens -->
-            <div class="relative w-58 sm:w-58 md:w-64 lg:w-80 h-40 sm:h-58 mt-2 py-5 md:h-64 lg:h-80 md:hidden">
+            <div class="relative w-58 sm:w-58 md:w-64 lg:w-80 h-40 sm:h-58 py-5 mb-16 md:h-64 lg:h-80 md:hidden">
                 <img :src="developer" alt="Developer Image"
                     class="w-full h-full object-cover rounded-full mx-auto shadow-lg">
 
@@ -94,6 +81,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 const phrases = ['Frontend Development', 'Backend Development'];
 const typed = ref('');
 const developer = '/imgs/developer.png';
+const experienceYears = new Date().getFullYear() - 2023;
 const phpimg = '/imgs/php.svg';
 const laravelimg = '/imgs/laravel.svg';
 const vueimg = '/imgs/vuejs.svg';
