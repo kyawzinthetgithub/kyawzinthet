@@ -16,5 +16,15 @@ export default defineNuxtConfig({
   devServer: {
     host: '0.0.0.0',
     port: 3000
+  },
+
+  app: {
+    head: {
+      title: 'My Portfolio',
+      titleTemplate: '%s | My Portfolio',
+      meta: [
+        { name: 'description', content: 'My portfolio website' }
+      ]
+    }
   }
 });
