@@ -1,5 +1,7 @@
 <template>
-  <TeachGrid :items="items" />
+  <div data-aos="zoom-in">
+    <TeachGrid :items="items" />
+  </div>
 </template>
 
 <script setup lang="ts">

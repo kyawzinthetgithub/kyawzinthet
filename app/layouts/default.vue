@@ -26,6 +26,7 @@
                     <nav class="space-x-4">
                         <a href="#" @click.prevent="scrollTo('home')" class="hover:text-primary transition">Home</a>
                         <a href="#" @click.prevent="scrollTo('about')" class="hover:text-primary transition">About</a>
+                        <a href="#" @click.prevent="scrollTo('teach')" class="hover:text-primary transition">Teach</a>
                         <a href="#" @click.prevent="scrollTo('projects')" class="hover:text-primary transition">Projects</a>
                         <a href="#" @click.prevent="scrollTo('contact')" class="hover:text-primary transition">Contact</a>
                     </nav>
@@ -40,6 +41,7 @@
                     <nav class="flex flex-col gap-2">
                         <a href="#" @click.prevent="scrollTo('home'); mobileMenuOpen = false" class="hover:text-primary transition">Home</a>
                         <a href="#" @click.prevent="scrollTo('about'); mobileMenuOpen = false" class="hover:text-primary transition">About</a>
+                        <a href="#" @click.prevent="scrollTo('teach'); mobileMenuOpen = false" class="hover:text-primary transition">Teach</a>
                         <a href="#" @click.prevent="scrollTo('projects'); mobileMenuOpen = false" class="hover:text-primary transition">Projects</a>
                         <a href="#" @click.prevent="scrollTo('contact'); mobileMenuOpen = false" class="hover:text-primary transition">Contact</a>
                         <div>
@@ -52,7 +54,7 @@
         <main class="p-5 mx-auto">
             <HomeSection id="home" />
             <AboutSection id="about" />
-            <TeachStack />
+            <TeachStack id="teach" />
         </main>
     </div>
 </template>
