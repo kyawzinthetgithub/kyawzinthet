@@ -24,10 +24,6 @@ const props = defineProps({
     type: Array as () => Tech[],
     required: true
   },
-  columns: {
-    type: Number,
-    default: 5
-  },
   limit: {
     type: Number,
     default: 0
@@ -36,7 +32,7 @@ const props = defineProps({
 
 const itemsToShow = computed(() => (props.limit > 0 ? props.items.slice(0, props.limit) : props.items));
 
-const gridClass = computed(() => `grid grid-cols-3 md:grid-cols-${props.columns} gap-4`);
+const gridClass = computed(() => `grid grid-cols-3 md:grid-cols-5 gap-4`);
 
 const initials = (name: string) => {
   if (!name) return '';

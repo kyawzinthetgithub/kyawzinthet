@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TeachGrid :items="items" :columns="5" />
+        <TeachGrid :items="items" />
     </div>
 </template>
 

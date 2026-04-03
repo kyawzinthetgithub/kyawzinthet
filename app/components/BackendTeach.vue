@@ -1,5 +1,5 @@
 <template>
-  <TeachGrid :items="items" :columns="5" />
+  <TeachGrid :items="items" />
 </template>
 
 <script setup lang="ts">
