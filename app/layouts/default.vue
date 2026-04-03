@@ -52,6 +52,7 @@
         <main class="p-5 mx-auto">
             <HomeSection id="home" />
             <AboutSection id="about" />
+            <TeachStack />
         </main>
     </div>
 </template>

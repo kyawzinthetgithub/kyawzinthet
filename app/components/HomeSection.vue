@@ -1,6 +1,6 @@
 <template>
-    <div class="grid md:grid-cols-2 gap-x-5 py-5">
-        <div class="flex justify-center items-center order-2 md:order-1">
+    <div class="grid md:grid-cols-2 gap-x-5 py-5 my-5">
+        <div data-aos="fade-right" class="flex justify-center items-center order-2 md:order-1">
             <div class="">
                 <h1 class="md:text-4xl text-3xl font-bold mb-4">Hi, I'm Kyaw Zin Thet 👋</h1>
                 <p class="text-lg mb-6">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center items-center order-1 md:order-2">
+        <div data-aos="fade-left" class="flex justify-center items-center order-1 md:order-2">
             <div class="relative w-40 sm:w-48 md:w-64 lg:w-80 h-40 sm:h-48 md:h-64 lg:h-80 hidden md:block">
                 <img :src="developer" alt="Developer Image"
                     class="w-full h-full object-cover rounded-full mx-auto shadow-lg">
@@ -77,6 +77,9 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const phrases = ['Frontend Development', 'Backend Development'];
 const typed = ref('');

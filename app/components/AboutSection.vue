@@ -31,6 +31,9 @@
 </template>
 
 <script setup>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const developer = '/imgs/about_developer.png';
 const experienceYears = new Date().getFullYear() - 2023;
