@@ -55,6 +55,7 @@
             <HomeSection id="home" />
             <AboutSection id="about" />
             <TeachStack id="teach" />
+            <ProjectSection id="projects" />
         </main>
     </div>
 </template>

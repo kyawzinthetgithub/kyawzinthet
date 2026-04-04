@@ -207,3 +207,7 @@ html {
 
 /* Edge/IE fallback: use track/ thumb pseudo-elements where supported */
 * { -ms-overflow-style: auto; }
+
+.hidescrollbar {
+  scrollbar-width: none; /* Firefox */
+}
