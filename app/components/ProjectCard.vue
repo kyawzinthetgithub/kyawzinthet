@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2 bg-gray-100 dark:bg-gray-800 rounded-lg p-2">
+  <div data-aos="zoom-in" class="flex flex-col gap-2 bg-gray-100 dark:bg-gray-800 rounded-lg p-2">
     <div class="relative group overflow-hidden rounded-lg bg-violet-50">
       <img :src="project.img" alt="project image" class="w-full h-46 object-cover rounded-lg" />
       <div
@@ -26,6 +26,9 @@
   </div>
 </template>
 <script setup>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 import { Icon } from '@iconify/vue';
 
 defineProps({

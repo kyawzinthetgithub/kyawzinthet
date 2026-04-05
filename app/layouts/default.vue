@@ -28,6 +28,7 @@
                         <a href="#" @click.prevent="scrollTo('about')" class="hover:text-primary transition">About</a>
                         <a href="#" @click.prevent="scrollTo('teach')" class="hover:text-primary transition">Teach</a>
                         <a href="#" @click.prevent="scrollTo('projects')" class="hover:text-primary transition">Projects</a>
+                        <a href="#" @click.prevent="scrollTo('experience')" class="hover:text-primary transition">Experience</a>
                         <a href="#" @click.prevent="scrollTo('contact')" class="hover:text-primary transition">Contact</a>
                     </nav>
                     <div>
@@ -43,6 +44,7 @@
                         <a href="#" @click.prevent="scrollTo('about'); mobileMenuOpen = false" class="hover:text-primary transition">About</a>
                         <a href="#" @click.prevent="scrollTo('teach'); mobileMenuOpen = false" class="hover:text-primary transition">Teach</a>
                         <a href="#" @click.prevent="scrollTo('projects'); mobileMenuOpen = false" class="hover:text-primary transition">Projects</a>
+                        <a href="#" @click.prevent="scrollTo('experience'); mobileMenuOpen = false" class="hover:text-primary transition">Experience</a>
                         <a href="#" @click.prevent="scrollTo('contact'); mobileMenuOpen = false" class="hover:text-primary transition">Contact</a>
                         <div>
                             <ThemeToggler />

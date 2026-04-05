@@ -7,21 +7,17 @@
             </div>
         </div>
 
-        <div class="mx-auto mt-8 grid max-w-6xl gap-6 md:grid-cols-3">
+        <div class="mx-auto mt-8 grid max-w-6xl gap-6 md:grid-cols-3 ">
             <ProjectCard v-for="(project, index) in filteredProjects" :key="index" :project="project" />
         </div>
     </div>
 </template>
 
 <script setup>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
 import { computed, ref } from 'vue';
 
-const mode = ref('all');
+const mode = ref('fullstack');
 const options = [
-    { label: 'All', value: 'all' },
     { label: 'Fullstack', value: 'fullstack' },
     { label: 'Ecommerce', value: 'ecommerce' },
     { label: 'Frontend', value: 'frontend' },
@@ -65,6 +61,64 @@ const projects = [
         img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562507/image/talktikoman_dyqpjk.png',
         type: ['frontend', 'ecommerce'],
     },
+    
+    // fullstack
+    {
+        title: 'Myanmar Post Office',
+        teach: 'HTML, CSS, JavaScript, VueJs, VueX, PHP, Laravel, PostgreSQL, Websockets, Laravel Reverb, Redis',
+        href: 'https://myanmarpost.com.mm/',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562503/image/myanmarpost_qsfcy0.png',
+        type: ['fullstack', 'frontend', 'backend'],
+    },
+    {
+        title: 'Task Assign Management System',
+        teach: 'HTML, CSS, JavaScript, VueJs, PHP, Laravel, PostgreSQL, Websockets, Laravel Reverb',
+        github: 'https://github.com/HninYeeNwe/TaskAssignManagementSystem',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763216631/image/task_assign_two_tasrvh.jpg',
+        type: ['fullstack'],
+    },
+    {
+        title: 'Finance Tracker',
+        teach: 'NuxtJs, TailwindCSS, Supabase',
+        href: 'https://gr-expense.netlify.app/login',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763216630/image/finance_tracker_io7kch.jpg',
+        type: ['fullstack'],
+    },
+    {
+        title: 'JetPack Mall',
+        teach: 'HTML5, CSS3, JavaScript, jQuery, PHP, Laravel, MySQL',
+        github: 'https://github.com/YeThura-424/jetpackmall',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763216631/image/online_shopping_gkyuev.jpg',
+        type: ['fullstack'],
+    },
+
+    //backend
+    {
+        title: 'POS LITE (API)',
+        teach: 'PHP, PostgreSQL, Laravel, Redis, MongoDB, Websockets, Supabase',
+        href: 'https://poslite.marketplace.com.mm/',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562504/image/poslite_xyg0oj.png',
+        type: ['backend'],
+    },
+
+    //opensource
+    {
+        title: 'Tech Stack Icon',
+        teach: 'Python, HTML, CSS, JavaScript',
+        href: 'https://tech-icon.netlify.app/docs/',
+        github: 'https://github.com/YeThura-424/tech_stack_icon',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562507/image/techstack_icon_kxzfe3.png',
+        type: ['opensource'],
+    },
+    {
+        title: 'User Role Permissions (Laravel Package)',
+        teach: 'PHP, Laravel',
+        href: 'https://packagist.org/packages/kyawzinthet/role-permissions',
+        github: 'https://github.com/kyawzinthetgithub/role-permissions',
+        img: 'https://imgs.search.brave.com/C4CCiVPKtWFetu4t9DJ0YjRZnjFfeQxnTEVKcjxI6-8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmFt/ZXJ1c2VyY29udGVu/dC5jb20vaW1hZ2Vz/L1RkZmlkOG5RRnV0/THBHSmd2aW0zTmlu/MzhzLndlYnA_d2lk/dGg9MTkyMCZoZWln/aHQ9OTYw',
+        type: ['opensource'],
+    },
+    
 ];
 
 const filteredProjects = computed(() => {
