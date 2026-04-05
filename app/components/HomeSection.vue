@@ -11,16 +11,18 @@
                     </span>
                 </p>
                 <div>
-                        <p>
-                            Experienced Full Stack Web Developer ({{ experienceYears }}+ years) specializing in <b class="text-primary">PHP</b>,
-                            <b class="text-primary">Laravel</b>, <b class="text-primary">Vue.js</b>, and <b
-                                class="text-primary">Nuxt.js</b>. I build scalable, test-driven backend APIs, write clean,
-                            well-documented code, mentor junior developers, and improve POS usability with practical,
-                            user-focused solutions.
-                        </p>
+                    <p>
+                        Experienced Full Stack Web Developer ({{ experienceYears }}+ years) specializing in <b
+                            class="text-primary">PHP</b>,
+                        <b class="text-primary">Laravel</b>, <b class="text-primary">Vue.js</b>, and <b
+                            class="text-primary">Nuxt.js</b>. I build scalable, test-driven backend APIs, write clean,
+                        well-documented code, mentor junior developers, and improve POS usability with practical,
+                        user-focused solutions.
+                    </p>
                 </div>
                 <div class="flex gap-4 mt-3">
-                    <a href="" class="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition">View
+                    <a href="#" @click.prevent="scrollTo('projects')" class=" px-4 py-2 bg-primary text-white rounded
+                        hover:bg-primary-dark transition">View
                         Projects</a>
                     <a href=""
                         class="px-4 py-2 border border-primary text-primary rounded hover:bg-primary hover:text-white transition">Contact
@@ -124,6 +126,14 @@ const type = () => {
 
         timer = setTimeout(type, 50)
     }
+}
+
+function scrollTo(id) {
+    const el = document.getElementById(id);
+    const header = document.querySelector('header');
+    const offset = header ? header.offsetHeight : 0;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
 }
 
 onMounted(() => {

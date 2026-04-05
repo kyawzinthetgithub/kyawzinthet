@@ -8,9 +8,7 @@
         </div>
 
         <div class="mx-auto mt-8 grid max-w-6xl gap-6 md:grid-cols-3">
-            <ProjectCard
-                v-for="project in filteredProjects" :key="project.title"
-            />
+            <ProjectCard v-for="(project, index) in filteredProjects" :key="index" :project="project" />
         </div>
     </div>
 </template>
@@ -33,13 +31,39 @@ const options = [
 
 const projects = [
     {
-        title: 'Unlock',
-        label: 'Frontend',
-        badge: 'Pro',
-        cta: 'CSS Tutorial',
+        title: 'Global Marketplace',
+        teach: 'NuxtJs, HTML, CSS, JavaScript, TailwindCSS, Websockets',
         href: 'https://marketplace.com.mm/',
         img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763565147/image/globalmarketplace_vjtd5n.png',
-        type: 'frontend',
+        type: ['frontend', 'ecommerce'],
+    },
+    {
+        title: 'BB Perfume',
+        teach: 'NuxtJs, HTML, CSS, JavaScript, TailwindCSS, Websockets',
+        href: 'https://demo.bbperfumestores.com/',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562502/image/bbperfumes_jttgtd.svg',
+        type: ['frontend', 'ecommerce'],
+    },
+    {
+        title: 'ZawGyi Mart',
+        teach: 'NuxtJs, HTML, CSS, JavaScript, TailwindCSS, Websockets',
+        href: 'https://zawgyimart.com/',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562506/image/zawgyimart_hp10yh.png',
+        type: ['frontend', 'ecommerce'],
+    },
+    {
+        title: 'Shop By Myanmar Post',
+        teach: 'NuxtJs, HTML, CSS, JavaScript, TailwindCSS, Websockets',
+        href: 'https://shop.myanmarpost.com.mm/',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763563664/image/myanmarpost_one_worr82.webp',
+        type: ['frontend', 'ecommerce'],
+    },
+    {
+        title: 'TalkTiko Man',
+        teach: 'NuxtJs, HTML, CSS, JavaScript, TailwindCSS, Websockets',
+        href: 'https://talktikoman.com/',
+        img: 'https://res.cloudinary.com/dznadalbq/image/upload/v1763562507/image/talktikoman_dyqpjk.png',
+        type: ['frontend', 'ecommerce'],
     },
 ];
 
@@ -48,6 +72,6 @@ const filteredProjects = computed(() => {
         return projects;
     }
 
-    return projects.filter((project) => project.type === mode.value);
+    return projects.filter((project) => project.type.includes(mode.value));
 });
 </script>
