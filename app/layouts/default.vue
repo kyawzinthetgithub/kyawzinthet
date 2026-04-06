@@ -28,7 +28,6 @@
                         <a href="#" @click.prevent="scrollTo('about')" class="hover:text-primary transition">About</a>
                         <a href="#" @click.prevent="scrollTo('teach')" class="hover:text-primary transition">Teach</a>
                         <a href="#" @click.prevent="scrollTo('projects')" class="hover:text-primary transition">Projects</a>
-                        <a href="#" @click.prevent="scrollTo('experience')" class="hover:text-primary transition">Experience</a>
                         <a href="#" @click.prevent="scrollTo('contact')" class="hover:text-primary transition">Contact</a>
                     </nav>
                     <div>
@@ -44,7 +43,6 @@
                         <a href="#" @click.prevent="scrollTo('about'); mobileMenuOpen = false" class="hover:text-primary transition">About</a>
                         <a href="#" @click.prevent="scrollTo('teach'); mobileMenuOpen = false" class="hover:text-primary transition">Teach</a>
                         <a href="#" @click.prevent="scrollTo('projects'); mobileMenuOpen = false" class="hover:text-primary transition">Projects</a>
-                        <a href="#" @click.prevent="scrollTo('experience'); mobileMenuOpen = false" class="hover:text-primary transition">Experience</a>
                         <a href="#" @click.prevent="scrollTo('contact'); mobileMenuOpen = false" class="hover:text-primary transition">Contact</a>
                         <div>
                             <ThemeToggler />
@@ -58,12 +56,25 @@
             <AboutSection id="about" />
             <TeachStack id="teach" />
             <ProjectSection id="projects" />
+            <ContactSection id="contact" />
         </main>
+        <footer>
+            <div class="px-8 py-4 flex justify-between items-center bg-card text-foreground">
+                <p>
+                    Made with ❤️ by <a href="#" class="text-primary text-lg font-semibold" >Kyaw Zin Thet</a>
+                </p>
+                <p class="flex justify-center items-center gap-x-3 text-success">
+                    <Icon icon="devicon:nuxt" class="text-3xl" />
+                    <span>Nuxt.js</span>
+                </p>
+            </div>
+        </footer>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { Icon } from '@iconify/vue';
 
 const isDark = ref(false);
 const mobileMenuOpen = ref(false);
