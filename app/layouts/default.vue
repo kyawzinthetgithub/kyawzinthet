@@ -37,7 +37,7 @@
             </div>
             <!-- Mobile nav -->
             <transition name="fade">
-                <div v-if="mobileMenuOpen" class="sm:hidden px-4 pb-4">
+                <div v-if="mobileMenuOpen" class="sm:hidden px-4 pb-4 sticky top-0 z-30">
                     <nav class="flex flex-col gap-2">
                         <a href="#" @click.prevent="scrollTo('home'); mobileMenuOpen = false" class="hover:text-primary transition">Home</a>
                         <a href="#" @click.prevent="scrollTo('about'); mobileMenuOpen = false" class="hover:text-primary transition">About</a>
@@ -63,7 +63,7 @@
                 <p>
                     Made with ❤️ by <a href="#" class="text-primary text-lg font-semibold" >Kyaw Zin Thet</a>
                 </p>
-                <p class="flex justify-center items-center gap-x-3 text-success">
+                <p class="hidden md:flex justify-center items-center gap-x-3 text-success">
                     <Icon icon="devicon:nuxt" class="text-3xl" />
                     <span>Nuxt.js</span>
                 </p>

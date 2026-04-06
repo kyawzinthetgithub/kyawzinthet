@@ -24,7 +24,7 @@
                     <a href="#" @click.prevent="scrollTo('projects')" class=" px-4 py-2 bg-primary text-white rounded
                         hover:bg-primary-dark transition">View
                         Projects</a>
-                    <a href=""
+                    <a href="#" @click.prevent="scrollTo('contact')"
                         class="px-4 py-2 border border-primary text-primary rounded hover:bg-primary hover:text-white transition">Contact
                         Me</a>
                 </div>
