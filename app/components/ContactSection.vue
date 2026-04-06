@@ -31,7 +31,14 @@
                         class="w-full border border-primary rounded-lg p-3 focus-visible:ring-0 focus-visible:outline-0"
                         placeholder="Your Message *"></textarea>
 
-                    <div class="flex justify-end">
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-3">
+                            <a v-for="social in socialLinks" :key="social.name" :href="social.href" target="_blank"
+                                rel="noopener noreferrer" :aria-label="social.label"
+                                class="flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-white/85 text-primary shadow-lg backdrop-blur-md transition hover:-translate-y-1 hover:bg-primary hover:text-white dark:bg-black/70">
+                                <Icon :icon="social.icon" class="text-2xl" />
+                            </a>
+                        </div>
                         <button type="submit" :disabled="isDisabled"
                             class="bg-primary text-white px-6 py-3 rounded-lg cursor-pointer disabled:cursor-not-allowed disabled:bg-gray-400">
                             {{ loading ? 'Sending...' : 'Say Hello!' }}
@@ -56,6 +63,7 @@ import 'aos/dist/aos.css';
 AOS.init();
 import { ref, watch } from 'vue';
 import emailjs from '@emailjs/browser';
+import { Icon } from '@iconify/vue';
 
 const contactImage = '/imgs/contact_me.png';
 const isDisabled = ref(true);
@@ -72,7 +80,22 @@ const form = ref({
     name: '',
     email: '',
     message: ''
-})
+});
+
+const socialLinks = [
+    {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/kyaw-zin-thet-160199310/',
+        label: 'Open LinkedIn profile',
+        icon: 'mdi:linkedin',
+    },
+    {
+        name: 'github',
+        href: 'https://github.com/kyawzinthetgithub',
+        label: 'Open GitHub profile',
+        icon: 'mdi:github',
+    },
+];
 
 watch(() => form.value, () => {
     isDisabled.value = !form.value.name || !form.value.email || !form.value.message;
